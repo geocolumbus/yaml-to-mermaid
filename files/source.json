@@ -1,0 +1,53 @@
+{
+  "my_string": "hello",
+  "my_number": 42,
+  "my_boolean": true,
+  "my_null": null,
+  "my_string_array": [
+    "hello",
+    "world"
+  ],
+  "my_number_array": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "my_object": {
+    "my_string": "hello",
+    "my_number": 42,
+    "my_boolean": true
+  },
+  "nested": {
+    "level2": {
+      "level3": {
+        "totals": [
+          45,
+          23,
+          76,
+          43
+        ]
+      }
+    }
+  },
+  "ob1": [
+    {
+      "ob2": {
+        "name": "George",
+        "location": "Worthington"
+      }
+    },
+    {
+      "ob3": {
+        "name": "John",
+        "location": "Columbus",
+        "pets": [
+          "dog",
+          "cat",
+          "fish"
+        ]
+      }
+    }
+  ]
+}
