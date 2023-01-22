@@ -1,53 +1,25 @@
 {
-  "my_string": "hello",
-  "my_number": 42,
-  "my_boolean": true,
-  "my_null": null,
-  "my_string_array": [
-    "hello",
-    "world"
-  ],
-  "my_number_array": [
-    1,
-    2,
-    3,
-    4,
-    5
-  ],
-  "my_object": {
-    "my_string": "hello",
-    "my_number": 42,
-    "my_boolean": true
-  },
-  "nested": {
-    "level2": {
-      "level3": {
-        "totals": [
-          45,
-          23,
-          76,
-          43
-        ]
-      }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "A sample template",
+    "Resources": {
+        "MyEC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-0ff8a91507f77f867",
+                "InstanceType": "t2.micro",
+                "KeyName": "testkey",
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/sdm",
+                        "Ebs": {
+                            "VolumeType": "io1",
+                            "Iops": 200,
+                            "DeleteOnTermination": false,
+                            "VolumeSize": 20
+                        }
+                    }
+                ]
+            }
+        }
     }
-  },
-  "ob1": [
-    {
-      "ob2": {
-        "name": "George",
-        "location": "Worthington"
-      }
-    },
-    {
-      "ob3": {
-        "name": "John",
-        "location": "Columbus",
-        "pets": [
-          "dog",
-          "cat",
-          "fish"
-        ]
-      }
-    }
-  ]
 }

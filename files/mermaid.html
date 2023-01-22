@@ -8,10 +8,41 @@
 <body>
   <div class="mermaid">
   flowchart LR
-    dict0(Process)
-    subgraph dict0[Process]
+    obj0(AWSTemplateFormatVersion: 2010-09-09)
+    obj1(Description: A sample template)
+    dict0(Resources)
+    style dict0 fill:#fff
+    subgraph dict0[Resources]
       direction LR
-      obj0(step1) --> obj2(step3)
+      dict1(MyEC2Instance)
+      style dict1 fill:#ff0
+      subgraph dict1[MyEC2Instance]
+        direction LR
+        obj2(Type: AWS::EC2::Instance)
+        dict2(Properties)
+        style dict2 fill:#f0f
+        subgraph dict2[Properties]
+          direction LR
+          obj3(ImageId: ami-0ff8a91507f77f867)
+          obj4(InstanceType: t2.micro)
+          obj5(KeyName: testkey)
+          dict3(BlockDeviceMappings)
+          style dict3 fill:#0ff
+          subgraph dict3[BlockDeviceMappings]
+            direction LR
+            obj6(DeviceName: /dev/sdm)
+            dict4(Ebs)
+            style dict4 fill:#f06
+            subgraph dict4[Ebs]
+              direction LR
+              obj7(VolumeType: io1)
+              obj8(Iops: 200)
+              obj9(DeleteOnTermination: "")
+              obj10(VolumeSize: 20)
+            end
+          end
+        end
+      end
     end
 
   </div>
