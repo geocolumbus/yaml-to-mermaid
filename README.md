@@ -24,6 +24,8 @@ To convert ```files/source.yaml``` to ```chart.html```.
 $ python -m yamer/core.js
 ```
 
+Then you can view the chart by opening chart.html in a browser (I used Chrome).
+
 To convert json to yaml, paste the json in ```files/source.json``` and run this ```yq``` command: 
 
 ```
